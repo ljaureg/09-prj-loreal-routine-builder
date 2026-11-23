@@ -27,14 +27,18 @@ body {
 }
 
 .logo {
+  display: block;
   width: 250px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
 }
 
 .site-title {
+  display: inline-block;
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #e3a535;
 }
 
 /* search and category filter */
@@ -118,11 +122,23 @@ body {
 
 /* chat section */
 .chatbox {
+  position: relative;
   margin: 40px 0;
   border: 2px solid #000;
   border-radius: 8px;
   padding: 26px;
   background-color: #fff;
+}
+
+.chatbox::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  inset-inline-end: -10px;
+  width: 5px;
+  background-color: #e3a535;
+  border-radius: 4px;
 }
 
 .chatbox-header {
@@ -436,11 +452,23 @@ body {
 
 /* selected products */
 .selected-products {
+  position: relative;
   margin: 40px 0;
   padding: 20px;
   border: 2px solid #000;
   border-radius: 8px;
   background-color: #fff;
+}
+
+.selected-products::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  inset-inline-start: -10px;
+  width: 5px;
+  background-color: #e3a535;
+  border-radius: 4px;
 }
 
 .selected-products-header {
